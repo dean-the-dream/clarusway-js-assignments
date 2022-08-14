@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10</title>
+</head>
+<body>
+    <script>
+        let day = prompt("Enter a day of the week.")
+        day = day.toUpperCase();
+        let weekday;
+        switch (day) {
+            case "MONDAY":
+                weekday = true;
+                break;
+            case "TUESDAY":
+                weekday = true;
+                break;
+            case "WEDNESDAY": 
+                weekday = true;
+                break;
+            case "THURSDAY": 
+                weekday = true;
+                break;
+            case "FRIDAY": 
+                weekday = true;
+                break;
+            default:
+                weekday = false;
+        }
+        weekday ? console.log(day + " is a weekday.") : console.log(day + " is not a weekday.");
+    </script>
+</body>
+</html>
