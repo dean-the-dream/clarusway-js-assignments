@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+</head>
+<body>
+    <script>
+        const sideA = prompt("Enter the length of the first side of the triangle");
+        const sideB = prompt("Enter the length of the second side of the triangle");
+        const sideC = prompt("Enter the length of the third side of the triangle");
+        const a = Number(sideA);
+        const b = Number(sideB);
+        const c = Number(sideC);
+        const s = (a + b + c) / 2;
+        const area = (s * (s-a) * (s-b) * (s-c)) ** .5;
+
+        console.log("The area of your triangle is " + area + "!");
+        
+    </script>
+</body>
+</html>
