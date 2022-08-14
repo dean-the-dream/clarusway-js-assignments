@@ -4,29 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leap Year</title>
+    <title>Assignment 7</title>
 </head>
 <body>
     <script>
-        let userText = prompt("Enter a number: ");
-        let userNum = Number(userText);
-        let leapYear;
-
-        if (!(userNum % 4)){
-            if (!(userNum % 100)) {
-                if (!(userNum % 400)) {
-                    leapYear = "is a Leap Year!"; 
-                } else {
-                    leapYear = "is not a Leap Year";
-                }
-            } else {
-                leapYear = "is a Leap Year!";
-            }
+        const num1 = prompt("Enter a number, positive or negative.");
+        const num2 = prompt("Enter a different number, positive or negative.");
+        const num3 = prompt("Enter a third number, positive or negative.");
+        const product = num1 * num2 * num3;
+        if (product >= 0 ) {
+            console.log("The sign is '+' (positive).");
         } else {
-            leapYear = "is not a Leap Year";
+            console.log("The sign is '-' (negative).");
         }
-
-console.log(userText + " " + leapYear + "!");
     </script>
 </body>
 </html>
