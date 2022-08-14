@@ -8,25 +8,18 @@
 </head>
 <body>
     <script>
-        let userText = prompt("Enter a number: ");
-        let userNum = Number(userText);
-        let leapYear;
-
-        if (!(userNum % 4)){
-            if (!(userNum % 100)) {
-                if (!(userNum % 400)) {
-                    leapYear = "is a Leap Year!"; 
-                } else {
-                    leapYear = "is not a Leap Year";
-                }
-            } else {
-                leapYear = "is a Leap Year!";
-            }
+        const num1 = prompt("Enter a number.");
+        const num2 = prompt("Enter a different number.");
+        const num3 = prompt("Enter a third number.");
+        if ((num1 > num2) && (num1 > num3)) {
+            console.log(num1 + " is the greatest number.");
+        } else if ((num2 > num1) && (num2 > num3)) {
+            console.log(num2 + " is the greater number.")
+        } else if((num3 > num1) && (num3 > num2)){
+            console.log(num2 + " is the greater number.");
         } else {
-            leapYear = "is not a Leap Year";
+            console.error("Something went wrong. Try again!");
         }
-
-console.log(userText + " " + leapYear + "!");
     </script>
 </body>
 </html>
