@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperture Converter</title>
+</head>
+<body>
+    <script>
+        const unit = prompt("Type 'F' to convert Farenheit to Celsius. Type 'C' to convert Celsius to Farenheit.");
+        let celsius, farenheight;
+
+        switch (unit) {
+            case 'C':
+                degree = prompt("Enter a temperature to convert.")
+                farenheight = ((9 * degree) + (32 * 5)) / 5;
+                console.log(degree + "° Celsius is " + farenheight + "° Farenheight!")
+                break;
+            case 'F':
+                degree = prompt("Enter a temperature to convert.")
+                celsius = (5 * (degree - 32)) / 9;
+                console.log(degree + "° Farenheight is " + celsius + "° Celsisus!")
+                break;
+            default:
+                console.error("You must enter a capital 'C' or a capital 'F'!")
+        }
+    </script>
+</body>
+</html>
