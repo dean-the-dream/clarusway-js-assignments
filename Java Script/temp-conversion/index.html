@@ -13,17 +13,17 @@
 
         switch (unit) {
             case 'C':
-                degree = prompt("Enter a temperature to convert.")
+                degree = prompt("Enter a temperature to convert.");
                 farenheight = ((9 * degree) + (32 * 5)) / 5;
-                console.log(degree + "° Celsius is " + farenheight + "° Farenheight!")
+                console.log(degree + "° Celsius is " + farenheight + "° Farenheight!");
                 break;
             case 'F':
                 degree = prompt("Enter a temperature to convert.")
                 celsius = (5 * (degree - 32)) / 9;
-                console.log(degree + "° Farenheight is " + celsius + "° Celsisus!")
+                console.log(degree + "° Farenheight is " + celsius + "° Celsisus!");
                 break;
             default:
-                console.error("You must enter a capital 'C' or a capital 'F'!")
+                console.error("You must enter a capital 'C' or a capital 'F'!");
         }
     </script>
 </body>
