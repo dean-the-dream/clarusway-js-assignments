@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 16</title>
+    <title>Assignment 17</title>
     <style>
         * {
             margin: 2px;
@@ -24,19 +24,15 @@
     </style>
 </head>
 <body>
-    <h1>Factorial</h1>
+    <h1>Multiples of 3 and 5</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-        let num1 = Number(prompt("Enter a number to get it's factorial."));
-        let factorial = num1;
-        let sum;
-        
-        for (let i = 1; i < num1; i++) {
-            factorial *= (num1 - i);
+        console.log("Here are all of the multiples of 3 and 5 between 100 and 1,000.")
+        for (let i = 99; i < 1000; i += 3) {
+            if (i % 5 == 0) {
+                console.log(i);
+            }
         }
-
-
-        console.log(num1 + "! is " + factorial + ".");
     </script>
 </body>
 </html>
