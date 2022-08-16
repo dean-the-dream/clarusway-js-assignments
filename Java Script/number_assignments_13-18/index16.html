@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 15</title>
+    <style>
+        * {
+            margin: 2px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            color: blue
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Factorial</h1>
+    <p>See Console For Program (Press F12)</p>
+    <script>
+        let num1 = Number(prompt("Enter a number to get it's factorial."));
+        let factorial = num1;
+        let sum;
+        
+        for (let i = 1; i < num1; i++) {
+            factorial *= (num1 - i);
+        }
+
+
+        console.log(num1 + "! is " + factorial + ".");
+    </script>
+</body>
+</html>
