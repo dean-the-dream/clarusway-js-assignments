@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 14</title>
+    <title>Assignment 15</title>
     <style>
         * {
             margin: 2px;
@@ -24,19 +24,27 @@
     </style>
 </head>
 <body>
-    <h1>Greatest Common Divisor (GCD)</h1>
+    <h1>Factors</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-        let num1 = 60;
-        let num2 = 50;
-        var gcd;
+        let num1 = Number(prompt("Enter a number to see it's factors."));
+        let factors = "!";
+        let count = 0;
         
-        for ( let i = 1; i <= num1; i++) {
-            if ((num1 % i == 0) && (num2 % i == 0) && (i < num1) && (i < num2)) {
-                gcd = i;
+        for ( let i = num1; i > 0; i--) {
+            if (num1 % i == 0) {
+                count += 1
             }
+            if (( count == 1) && (num1 % i == 0)) {
+                factors = " and " + i + factors;
+            } else if (i == 1) {
+                factors = i + factors;
+            } else {
+                factors = ", " + i + factors;
+            }
+
         }
-        console.log("The Greatest Common Denominator is " + gcd + "!");
+        console.log("The factors of " + num1 + " are " + factors);
     </script>
 </body>
 </html>
