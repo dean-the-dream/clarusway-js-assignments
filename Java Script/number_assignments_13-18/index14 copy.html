@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 13/title>
+    <title>Assignment 14</title>
     <style>
         * {
             margin: 2px;
@@ -24,20 +24,19 @@
     </style>
 </head>
 <body>
-    <h1>Valid Input??</h1>
+    <h1>Greatest Common Divisor (GCD)</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-        let input; 
-        let valid = Math.floor((Math.random() * 10) + 1);
-        console.log("Hint: " + valid);  // comment this line to hide the hint
-        do {
-            input = Number(prompt ("Pick a number from one to ten."));
-        } while (input != valid);
-
+        let num1 = 60;
+        let num2 = 50;
+        var gcd;
         
-
-        console.log("The number " + String(input) + " is a valid input!");
-      
+        for ( let i = 1; i <= num1; i++) {
+            if ((num1 % i == 0) && (num2 % i == 0) && (i < num1) && (i < num2)) {
+                gcd = i;
+            }
+        }
+        console.log("The Greatest Common Denominator is " + gcd + "!");
     </script>
 </body>
 </html>
