@@ -9,18 +9,18 @@
 <body>
     <script>
         const unit = prompt("Type 'F' to convert Farenheit to Celsius. Type 'C' to convert Celsius to Farenheit.");
-        let celsius, farenheight;
+        let celsius, farenheiht;
 
         switch (unit) {
             case 'C':
-                degree = prompt("Enter a temperature to convert.");
-                farenheight = ((9 * degree) + (32 * 5)) / 5;
-                console.log(degree + "° Celsius is " + farenheight + "° Farenheight!");
+                degree = Number(prompt("Enter a temperature to convert."));
+                farenheit = ((9 * degree) + (32 * 5)) / 5;
+                console.log(degree + "° Celsius is " + farenheit + "° Farenheight!");
                 break;
             case 'F':
-                degree = prompt("Enter a temperature to convert.")
+                degree = Number(prompt("Enter a temperature to convert."));
                 celsius = (5 * (degree - 32)) / 9;
-                console.log(degree + "° Farenheight is " + celsius + "° Celsisus!");
+                console.log(degree + "° Farenheit is " + celsius + "° Celsisus!");
                 break;
             default:
                 console.error("You must enter a capital 'C' or a capital 'F'!");
