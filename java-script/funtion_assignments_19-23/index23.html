@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 23</title>
+    <style>
+        * {
+            margin: 2px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            color: blue
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guessing Game</h1>
+    <p>See Console For Program (Press F12)</p>
+    <script>
+    const winningNumber = Math.round(Math.random() * 100);
+    let guess = Number(prompt(`Guess the winning number!\n${winningNumber}`));
+    function guessCheck (x) {
+        while(isNaN(x) || (x < 1)) {
+            x = Number(prompt("Please enter a postive integer."));
+        }   
+        guess = x;
+    }
+    guessCheck(guess);
+    let turn = 1;
+    while((turn <= 5) && (guess != winningNumber)) {
+        turn++; 
+        if (guess < winningNumber){
+            guess = Number(prompt(`The winning number is greater than ${guess}.\nGuess again!`)); 
+        } else if (guess > winningNumber) {
+            guess = Number(prompt(`The winning number is less than ${guess}.\nGuess again!`)); 
+        } else {
+            break;
+        }
+        guessCheck(guess); 
+    }
+    if(turn > 5){
+        console.log("Whoops! No more guesses!");
+        console.log(`The winning number was ${winningNumber}!`);
+        console.log(`Refresh the browser to play again!`);
+    } else {
+        console.log("Congratulations! You win!");
+        (guess < 1) ? console.log(`After ${turn} guesses, you guessed correctly.`) : console.log(`You guess correctly on the first try!!!`)
+        console.log(`The winning number is ${guess}`);
+    }
+    </script>
+</body>
+</html>
