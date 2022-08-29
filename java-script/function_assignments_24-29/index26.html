@@ -27,6 +27,18 @@
     <h1>String Abbreviation</h1>
     <p>See Console For Program (Press F12)</p>
     <script>   
+    let name = "John Doe Marcus"
+    let abbr = function (properName) {
+         if(!properName.includes(" ")){
+            return properName
+         } else if (properName.indexOf(" ") == (properName.length - 1)) {
+            return properName.slice(0, (properName.length - 1))
+         } else {
+            return properName.slice(0, properName.indexOf(" ") + 1) + 
+                   properName[properName.indexOf(" ") + 1] + ".";
+         }
+    }  
+    console.log(abbr(name));
     </script>
 </body>
 </html>
