@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 24</title>
+    <style>
+        * {
+            margin: 2px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            color: blue
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palindrome</h1>
+    <p>See Console For Program (Press F12)</p>
+    <script>
+        let palindrome = "tattarrattat"
+        let check = function (x) {
+            let lower = x.toLowerCase();
+            for(let i = 0; i <= Math.floor(x.length / 2); i++){
+                if(lower[i] != lower[(lower.length-1) - i]) {
+                    return false;
+                }
+                return true;
+            }   
+        }
+        console.log(check(palindrome));
+    </script>
+</body>
+</html>
