@@ -28,14 +28,15 @@
     <p>See Console For Program (Press F12)</p>
     <script>   
     let str = "hippopotomonstrosesquippedaliophobia"
-
-    let strConvert = function (x, y) {
+    let numOfChars = 5
+    let strConvert = function (word, numOfChars) {
         let newStr = "";
-        for(let i = 0; i < y; i++) {
-            newStr += x[i];
+        for(let i = 0; i < numOfChars; i++) {
+            newStr += word[i];
         }
         return newStr;
     }
+    console.log("Modify the function named 'strConvert' to see the results.")
     console.log(strConvert(str,5));
     </script>
 </body>
