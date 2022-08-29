@@ -26,8 +26,17 @@
 <body>
     <h1>Character Selector</h1>
     <p>See Console For Program (Press F12)</p>
-    <script>
+    <script>   
+    let str = "hippopotomonstrosesquippedaliophobia"
 
+    let strConvert = function (x, y) {
+        let newStr = "";
+        for(let i = 0; i < y; i++) {
+            newStr += x[i];
+        }
+        return newStr;
+    }
+    console.log(strConvert(str,5));
     </script>
 </body>
 </html>
