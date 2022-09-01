@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 27</title>
+    <title>Assignment 28</title>
     <style>
         * {
             margin: 2px;
@@ -24,20 +24,10 @@
     </style>
 </head>
 <body>
-    <h1>Mask Email</h1>
+    <h1>Convert to Title</h1>
     <p>See Console For Program (Press F12)</p>
     <script>  
-    let email = "lawrence_dean@icloud.com"
-    const privacy = function (x) {
-        let firstHalf = x.slice(0,x.indexOf("@"));
-        let firstHalfArray = firstHalf.split("");
-        for(let i = firstHalf.length-1; i > Math.floor((firstHalf.length-1) / 2); i--) {
-            firstHalfArray[i] = "*";
-        }
-        let hidden = firstHalfArray.join("") 
-        return hidden + email.slice(email.indexOf("@"), email.length);
-    }
-    console.log(privacy(email));
+
     </script>
 </body>
 </html>
