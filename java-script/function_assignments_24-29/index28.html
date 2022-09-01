@@ -27,7 +27,13 @@
     <h1>Convert to Title</h1>
     <p>See Console For Program (Press F12)</p>
     <script>  
-
+        let sentence = "the quick brown fox jumps over the lazy dog"
+        let capitalize = (x) => {
+            let sentenceArray = x.split(" ");
+            let xCap = sentenceArray.map(word => word.toUpperCase()[0] + word.slice(1, word.length))
+            return xCap.join(" ");
+        }
+        console.log(capitalize(sentence))
     </script>
 </body>
 </html>
