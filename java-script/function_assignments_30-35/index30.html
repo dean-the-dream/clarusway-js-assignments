@@ -27,7 +27,16 @@
     <h1>Array to String</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-        
+        const arr = ["apple", "banana", "orange", "pear", "lemon", "strawberry", "grapefruit"];
+        function createString(x) {
+            let y = "";
+            for(i of x) {
+                y += i + ", "
+            }
+            y = y.slice(0, y.length - 2);
+            return y;
+        }
+        console.log(createString(arr))
     </script>
 </body>
 </html>
