@@ -28,14 +28,28 @@
     <p>See Console For Program (Press F12)</p>
     <script>
         const numString = "34431#$%432~2"
+// ;        const dashNums =  (x)=>  {
+//          let stringArray = x.split("");
+//          stringArray = stringArray.filter(y => !(isNaN(Number(y))));
+//          let stringArray2 = [...stringArray.map(z=> Number(z))];
+//          let newString = [];
+//          for(let i = 0; i < stringArray2.length; i++) {
+//             newString.push(stringArray2[i]);
+//             if((stringArray2[i] % 2 === 0) && (stringArray2[i+1] % 2 === 0)){
+//                 newString.push("-");
+//             }
+            
+//          }
+//             return newString;
+//         }
 ;        const dashNums =  (x)=>  {
-         let stringArray = x.split("");
-         stringArray = stringArray.filter(y => !(isNaN(Number(y))));
-         let stringArray2 = [...stringArray.map(z=> Number(z))];
+         let stringArray = x.split("")
+         .stringArray.filter(y => !(isNaN(Number(y))))
+         .map(z=> Number(z));
          let newString = [];
-         for(let i = 0; i < stringArray2.length; i++) {
-            newString.push(stringArray2[i]);
-            if((stringArray2[i] % 2 === 0) && (stringArray2[i+1] % 2 === 0)){
+         for(let i = 0; i < stringArray.length; i++) {
+            newString.push(stringArray[i]);
+            if((stringArray[i] % 2 === 0) && (stringArray[i+1] % 2 === 0)){
                 newString.push("-");
             }
             
