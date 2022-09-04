@@ -27,7 +27,16 @@
     <h1>Sort Array</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-        const numOrder =  [3,-1,5,10,2,300,40,-18]
+        const nums =  [3,-1,5,10,2,300,40,-18]
+        function orderArray (x) {
+            let ordered = [];
+            while(x.length != 0) {
+                ordered.push(Math.min(...x));
+                x.splice(x.indexOf(Math.min(...x)),1);
+            }
+            return ordered
+        }
+        console.log(orderArray(nums));
     </script>
     </script>
 </body>
