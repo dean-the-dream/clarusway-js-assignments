@@ -27,7 +27,27 @@
     <h1>Add Number Range</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
+        const addRange = (x,y) => {
+            let greater;
+            let lesser;
+            const allNums = [];
+            if(x == y) {
+                return x;
+            } else if (x > y) {
+                greater = x;
+                lesser = y;
+            } else {
+                greater = y;
+                lesser = x;
+            }
 
+            for(let i = lesser; i <= greater; i++) {
+                allNums.push(i);
+            }
+            
+            return allNums.reduce((x,y)=> x+y) 
+        }
+        console.log(addRange(20,10))
     </script>
 </body>
 </html>
