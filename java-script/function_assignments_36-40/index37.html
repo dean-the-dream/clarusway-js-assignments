@@ -27,7 +27,25 @@
     <h1>Letter Count</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-
+        const userString = "The Quick Brown Fox Jumps Over The Lazy Dog.";
+        
+        const letterCount = (x) => {
+            const vowels = "aeiou".split("");
+            const consonants = "bcdfghjklmnpqrstvwxyz".split("");
+            let vowelCount = 0;
+            let consCount = 0;
+            const xArr = x.split("")
+            for(i of xArr){
+                if(vowels.includes(i.toLowerCase())){
+                    vowelCount++;
+                } else if (consonants.includes(i.toLowerCase())){
+                    consCount++;
+                }
+            }
+            return `There are ${vowelCount} vowels
+and ${consCount} consonants.`;
+        }
+        console.log(letterCount(userString))
     </script>
 </body>
 </html>
