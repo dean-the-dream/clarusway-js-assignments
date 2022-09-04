@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 32</title>
+    <title>Assignment 33</title>
     <style>
         * {
             margin: 2px;
@@ -24,19 +24,30 @@
     </style>
 </head>
 <body>
-    <h1>Sort Array</h1>
+    <h1>Most Frequent</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-        const nums =  [3,-1,5,10,2,300,40,-18]
-        function orderArray (x) {
-            let ordered = [];
-            while(x.length != 0) {
-                ordered.push(Math.min(...x));
-                x.splice(x.indexOf(Math.min(...x)),1);
+        const arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]
+        
+        function countArr (x) {
+            let item;
+            let occurances = 0;
+            let counter = 0;
+            for(i in x){
+                for(j of x) {
+                    if(j == x[i]){
+                        counter += 1;
+                    }
+                }
+                if(counter > occurances){
+                    occurances = counter;
+                    item = x[i];
+                }
+                counter = 0;
             }
-            return ordered
+            return `${item} (${occurances} times)`
         }
-        console.log(orderArray(nums));
+        console.log(countArr(arr))
     </script>
     </script>
 </body>
