@@ -27,7 +27,18 @@
     <h1>Array Sum</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-    
+        const addends = [10, 15, 3, 7] ;
+        const sum = 17;
+        let findAddends = (j,k) => {
+            for(x in j) {
+                for(y of j)
+                    if(j[x] + y == k){
+                        return true;
+                    } 
+            }
+            return false;
+        };
+        console.log(findAddends(addends,sum))
     </script>
 </body>
 </html>
