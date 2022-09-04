@@ -27,6 +27,15 @@
     <h1>Word Repeater</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
+        const repeater = (word,sep,rep) => {
+            const strArr = [];
+            for(let i = 0; i <= rep; i++){
+                strArr.push(word);
+            }
+            const repeatString = strArr.join(sep);
+            return repeatString;
+        }
+        console.log(repeater("Dean","!",5));
     </script>
 </body>
 </html>
