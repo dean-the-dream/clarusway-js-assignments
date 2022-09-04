@@ -27,7 +27,18 @@
     <h1>Word Repeater</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-        
+        const obj1 = {'Apple': 15, 'Orange': 35, 'Melon': 20, 'Banana': 50, 'Pear': 40};
+        const copyObj = (obj) => {
+            let objArr = Object.entries(obj);
+            let doubleObj = objArr.map(x => x = [x[0],(x[1]*2)]);
+            let obj2 = {};
+            for(i of doubleObj){
+                obj2[i[0]] = i[1];
+            }
+
+            return obj2;
+        }
+        console.log(copyObj(obj1));
     </script>
 </body>
 </html>
