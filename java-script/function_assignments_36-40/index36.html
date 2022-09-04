@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 36</title>
+    <style>
+        * {
+            margin: 2px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            color: blue
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Average Score</h1>
+    <p>See Console For Program (Press F12)</p>
+    <script>
+        //Write a JS code that calculates the average of scores that students took in a math class below.
+        scores = {"Mary" : 85, "Susan": 75, "Barry" : 65, "Alexis" : 88, "Jane" : 45, "Tina" : 100, "Tom" : 90, "Tim": 60};
+        let averages = (x) => {
+            let valueSum = Object.values(x)
+                .reduce((y, z) => y + z);
+
+            return valueSum / Object.values(x).length
+        }
+        console.log(averages(scores));
+    </script>
+</body>
+</html>
