@@ -24,10 +24,31 @@
     </style>
 </head>
 <body>
-    <h1></h1>
+    <h1>Count Characters</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
- 
+        const string = "www.clarusway.com";
+        const stringArr = string.split("");
+        const objArr = []
+        const charCounts = {}
+        
+        for(i of stringArr) {
+            let count = 0;
+            if(objArr.includes(i)){
+                continue;
+            } 
+            for(j of stringArr){
+                if(j == i) {
+                    count++
+                }
+                
+            }
+            objArr.push([i,count]);
+        }
+        for(i of objArr){
+            charCounts[i[0]] = i[1];
+        }
+        console.log(charCounts)
     </script>
 </body>
 </html>
