@@ -27,7 +27,24 @@
     <h1></h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-
+        let equations = ["5 + 6", "2 * 3", "8 / 4", "4 - 5"]
+        const operation = (x) => {
+            switch(x[2]) {
+                case "+":
+                    return Number(x[0]) + Number(x[4]);
+                    break;
+                case "-":
+                    return Number(x[0]) - Number(x[4]);
+                    break;
+                case "/":
+                    return Number(x[0]) / Number(x[4]);
+                    break;
+                case "*":
+                    return Number(x[0]) * Number(x[4]);
+                    break;
+            }
+        }
+        console.log(equations.map(item => operation(item)));
     </script>
 </body>
 </html>

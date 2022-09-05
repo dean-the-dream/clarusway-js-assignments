@@ -24,10 +24,15 @@
     </style>
 </head>
 <body>
-    <h1></h1>
+    <h1>Extract Nums</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
-
+        let text = "Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances.";
+        function extract (x) {
+           let textArr = x.split(" ");
+           return textArr.filter(y => !isNaN(Number(y)) && Number(y) > 150);
+        }
+        console.log(extract(text));
     </script>
 </body>
 </html>
