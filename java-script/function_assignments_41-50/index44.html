@@ -28,10 +28,13 @@
     <p>See Console For Program (Press F12)</p>
     <script>
         // See below the math exam results of students. Teacher decided to give everyone additional 10 points. Write a JS code to copy all of the contents of dict1 to dict2 by adding 10 points to each student.
-        dict1 = {'Susan': 45, 'Tim': 35, 'Tina': 70, 'Tom': 65, 'Tony': 40};
-        for(let i = 0; i <= Object.entries(dict1).length; i++){
-            
+        const dict1 = {'Susan': 45, 'Tim': 35, 'Tina': 70, 'Tom': 65, 'Tony': 40};
+        const dict2 = {}; 
+
+        for(let [key, value] of Object.entries(dict1)){
+           dict2[key] = value + 10;
         }
+        console.log(dict2);
     </script>
 
 </body>
