@@ -24,9 +24,21 @@
     </style>
 </head>
 <body>
-    <h1></h1>
+    <h1>>Sums Array</h1>
     <p>See Console For Program (Press F12)</p>
     <script>
+        const arr1 = [1, 2, 3, 4, 5];
+        const sumsArr = (x) => {
+            const sums = [];
+            let arr2 = [];
+            for(i in x){
+                arr2 = [...x];
+                arr2.splice(i,1);
+                sums.push(arr2.reduce((x,y) => x * y));
+            }
+            return sums;
+        }
+        console.log(sumsArr(arr1));
     </script>
 </body>
 </html>
