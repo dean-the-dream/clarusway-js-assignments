@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 51</title>
+    <style>
+        * {
+            margin: 2px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            color: blue
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lottery</h1>
+    <p>See Console For Program (Press F12)</p>
+    <script>
+        const whiteBall = () => {
+            const whiteBallNums = []
+            for(let i = 0; i < 6; i++){
+                whiteBallNums.push(Math.floor((Math.random() * 70) + 1));
+            }
+            return `The White Ball winning numbers are ${whiteBallNums[0]}, ${whiteBallNums[1]}, ${whiteBallNums[2]}, ${whiteBallNums[3]}, ${whiteBallNums[4]} and ${whiteBallNums[5]}!`;
+        }
+
+        const powerBall = () => {
+            const powerBallNum = Math.floor((Math.random() * 70) + 1);
+            return `The Power Ball winning number is ${powerBallNum}!`
+        }
+        
+        console.log(whiteBall());
+        console.log(powerBall());
+        
+    </script>
+</body>
+</html>
