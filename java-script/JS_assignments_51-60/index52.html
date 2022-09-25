@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 52</title>
+    <style>
+        * {
+            margin: 2px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            color: blue
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Object</h1>
+    <p>See Console For Program (Press F12)</p>
+    <script>
+        let y;
+        const createGrade= () => {return (Math.floor((Math.random() * 66) + 35))}
+        function createLessons(x) {
+            const lessons = {}
+            for(let i = 0; i < ((x) ? x : 5); i++){
+                let lesson = `Lesson-${i+1}`
+                let grade = createGrade();
+                lessons[lesson] = grade;  
+            } 
+            return lessons
+        }
+
+        function createStudents(x) {
+            const students = {}
+            for(let i = 0; i < ((x) ? x : 5); i++){
+                let student = `Student-${i+1}`
+                let lessons = createLessons(); //enter the amount of desired lessons, if no arguments present, returns 5
+                students[student] = lessons;  
+            } 
+            console.log(students)
+            return students
+        }
+
+        createStudents(4); //enter the amount of desired students, if no arguments present, returns 5
+    </script>
+</body>
+</html>
